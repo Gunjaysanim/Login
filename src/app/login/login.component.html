@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="card">
+      <h1>Login here</h1>
+      <p>if you have not yet registered, please  <a href="http://localhost:4200/register">Register here</a></p>
+
+      <form #myLogin="ngForm" (ngSubmit)="doLogin(myLogin.value)">
+        <p>
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>Email Id</mat-label>
+            <input
+              type="email"
+              name="email"
+              [(ngModel)]="data.email"
+              matInput
+              placeholder="Enter valid Email Id"
+            />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>Password</mat-label>
+            <input
+              type="password"
+              name="password"
+              [(ngModel)]="data.password"
+              matInput
+              placeholder="Enter Password"
+            />
+          </mat-form-field>
+        </p>
+        <div class="send">
+          <Button type="submit" mat-raised-button color="primary"
+            >Login</Button>
+          <Button type="menu" mat-raised-button color="accent" (click)="backBtn()">Register</Button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  

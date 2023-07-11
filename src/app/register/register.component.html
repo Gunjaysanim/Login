@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="card">
+    <h1>Registation here</h1>
+    <form #myForm="ngForm" (ngSubmit)="doRegistration(myForm.value)">
+      <p>
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Name</mat-label>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="data.name"
+            matInput
+            placeholder="Enter Name"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Email Id</mat-label>
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="data.email"
+            matInput
+            placeholder="Enter valid Email Id"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Mobile Number</mat-label>
+          <input
+            type="tel"
+            name="tel"
+            [(ngModel)]="data.mobile"
+            matInput
+            placeholder="Enter valid Mobile Number"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>City</mat-label>
+          <input
+            type="text"
+            name="city"
+            [(ngModel)]="data.city"
+            matInput
+            placeholder="Enter City"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Password</mat-label>
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="data.password"
+            matInput
+            placeholder="Enter Password"
+          />
+        </mat-form-field>
+      </p>
+      <div class="send">
+        <Button type="submit" mat-raised-button color="primary"
+          >Register</Button
+        >
+        <Button type="reset" mat-raised-button color="accent">Reset</Button>
+      </div>
+      <p>if you have already created your Username and Password click here to <a href="http://localhost:4200/login">Login</a></p>
+     
+    </form>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.container{
+    text-align: left;
+    margin-top: 20px;
+}
+.container .oper button{
+    margin:10px;
+}
